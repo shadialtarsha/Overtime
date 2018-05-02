@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/whiteColor">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/conversation_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:id="@+id/new_message_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/comment_section_bottom_margin"
+            android:layout_marginLeft="@dimen/comment_section_left_margin"
+            android:layout_marginRight="@dimen/comment_section_right_margin"
+            android:gravity="center"
+            android:minHeight="@dimen/comment_section_min_height"
+            android:orientation="horizontal"
+            android:background="@color/whiteColor">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/conversation_user_profile_image_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="@dimen/user_profile_photo_image_view_radius"/>
+
+            <EditText
+                android:id="@+id/conversation_new_message_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/comment_edit_text_left_margin"
+                android:layout_marginRight="@dimen/comment_edit_text_right_margin"
+                android:layout_weight="1"
+                android:background="@color/whiteColor"
+                android:focusable="true"
+                android:hint="@string/conversation_write_message_edit_text_hint"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/comment_edit_text_text_size"/>
+
+            <ImageButton
+                android:id="@+id/send_message_image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_send_message"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/new_message_section"
+            android:background="@color/whiteColor">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/messages_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"/>
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/messages_empty_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/say_hi_photo"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/conversation_say_hi"
+                        android:textColor="@color/blackColor"
+                        android:textSize="@dimen/no_content_text_size"/>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </FrameLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

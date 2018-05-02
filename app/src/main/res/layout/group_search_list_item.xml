@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    card_view:cardElevation="@dimen/search_group_card_view_elevation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/search_group_relative_layout_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/search_group_linear_layout_margin"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/search_group_photo_image_view"
+                    android:layout_width="@dimen/group_photo_width"
+                    android:layout_height="@dimen/group_photo_height"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/group_photo_image_view_radius"/>
+
+                <TextView
+                    android:id="@+id/search_group_join_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/search_group_join_text_view_top_margin"
+                    android:background="@drawable/group_search_join_text_view_custom_bg"
+                    android:padding="@dimen/search_group_join_text_view_padding"
+                    android:textAlignment="center"
+                    android:textColor="@color/blackColor"
+                    android:text="@string/group_join_button"
+                    android:textSize="@dimen/search_group_join_text_view_text_size"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_group_info_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/search_group_info_linear_layout_margin"
+                android:background="@drawable/group_search_group_info_custom_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/search_group_name_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/search_group_name_text_view_top_margin"
+                    android:textAlignment="center"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/search_group_name_text_view_text_size"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/search_group_bio_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/search_group_bio_text_end_margin"
+                    android:layout_marginStart="@dimen/search_group_bio_text_start_margin"
+                    android:textAlignment="center"
+                    android:textColor="@color/blackColor"/>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:padding="@dimen/search_group_social_info_grid_layout_padding"
+                    android:rowCount="2">
+
+                    <TextView
+                        android:id="@+id/search_group_posts_counter_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/blackColor"/>
+
+                    <TextView
+                        android:id="@+id/search_group_members_counter_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/search_group_social_info_text_view_end_margin"
+                        android:layout_marginStart="@dimen/search_group_social_info_text_view_start_margin"
+                        android:textColor="@color/blackColor"/>
+
+                    <TextView
+                        android:id="@+id/search_group_likes_counter_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/search_group_social_info_text_view_end_margin"
+                        android:layout_marginStart="@dimen/search_group_social_info_text_view_start_margin"
+                        android:textColor="@color/blackColor"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/search_group_social_info_text_view_end_margin"
+                        android:layout_marginStart="@dimen/search_group_social_info_text_view_start_margin"
+                        android:text="@string/group_posts_counter"
+                        android:textColor="@color/blackColor"
+                        android:textSize="@dimen/search_group_social_info_text_view_text_size"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/search_group_social_info_text_view_end_margin"
+                        android:layout_marginStart="@dimen/search_group_social_info_text_view_start_margin"
+                        android:text="@string/group_members_counter"
+                        android:textColor="@color/blackColor"
+                        android:textSize="@dimen/search_group_social_info_text_view_text_size"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/search_group_social_info_text_view_end_margin"
+                        android:layout_marginStart="@dimen/search_group_social_info_text_view_start_margin"
+                        android:text="@string/group_likes_counter"
+                        android:textColor="@color/blackColor"
+                        android:textSize="@dimen/search_group_social_info_text_view_text_size"
+                        android:textStyle="bold"/>
+                </GridLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

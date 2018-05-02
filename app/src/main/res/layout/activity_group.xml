@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="@dimen/group_appbar_toolbar_elevation">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/group_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/group_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:stateListAnimator="@drawable/appbar_always_elevated"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/group_collapse_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:titleEnabled="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/group_appbar_relative_layout_end_margin"
+                    android:layout_marginStart="@dimen/group_appbar_relative_layout_start_margin"
+                    android:layout_marginTop="@dimen/group_appbar_relative_layout_top_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/group_user_info_margin"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <android.support.v4.widget.Space
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/group_image_card_view"
+                                android:layout_width="@dimen/group_photo_width"
+                                android:layout_height="@dimen/group_photo_height"
+                                app:cardCornerRadius="@dimen/group_card_view_photo_radius"
+                                app:cardElevation="@dimen/group_card_view_photo_elevation">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/group_photo_image_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:riv_corner_radius="@dimen/group_photo_image_view_radius"/>
+                            </android.support.v7.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/group_user_rank_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/group_user_rank_top_margin"
+                                android:background="@drawable/group_user_rank_text_view_custom_bg"
+                                android:gravity="center"
+                                android:padding="@dimen/group_user_rank_padding"
+                                android:textColor="@color/whiteColor"
+                                android:textSize="@dimen/group_user_rank_text_size"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/group_info_linear_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/group_info_linear_layout_margin"
+                            android:background="@drawable/group_info_custom_linear_layout_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/group_name_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/group_name_text_view_top_margin"
+                                android:textColor="@color/whiteColor"
+                                android:textSize="@dimen/group_name_text_view_text_size"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/group_bio_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/group_bio_text_end_margin"
+                                android:layout_marginStart="@dimen/group_bio_text_start_margin"
+                                android:textAlignment="center"
+                                android:textColor="@color/whiteColor"/>
+
+                            <GridLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:columnCount="3"
+                                android:padding="@dimen/group_social_info_grid_layout_padding"
+                                android:rowCount="2">
+
+                                <TextView
+                                    android:id="@+id/group_posts_counter_text_view"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/whiteColor"/>
+
+                                <TextView
+                                    android:id="@+id/group_members_counter_text_view"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/group_social_info_text_view_end_margin"
+                                    android:layout_marginStart="@dimen/group_social_info_text_view_start_margin"
+                                    android:textColor="@color/whiteColor"/>
+
+                                <TextView
+                                    android:id="@+id/group_likes_counter_text_view"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/group_social_info_text_view_end_margin"
+                                    android:layout_marginStart="@dimen/group_social_info_text_view_start_margin"
+                                    android:textColor="@color/whiteColor"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/group_social_info_text_view_end_margin"
+                                    android:layout_marginStart="@dimen/group_social_info_text_view_start_margin"
+                                    android:text="@string/group_posts_counter"
+                                    android:textColor="@color/whiteColor"
+                                    android:textSize="@dimen/group_social_info_text_view_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/group_social_info_text_view_end_margin"
+                                    android:layout_marginStart="@dimen/group_social_info_text_view_start_margin"
+                                    android:text="@string/group_members_counter"
+                                    android:textColor="@color/whiteColor"
+                                    android:textSize="@dimen/group_social_info_text_view_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/group_social_info_text_view_end_margin"
+                                    android:layout_marginStart="@dimen/group_social_info_text_view_start_margin"
+                                    android:text="@string/group_likes_counter"
+                                    android:textColor="@color/whiteColor"
+                                    android:textSize="@dimen/group_social_info_text_view_text_size"
+                                    android:textStyle="bold"/>
+                            </GridLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/group_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/group_tab_layout_top_margin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:tabIndicatorColor="@color/whiteColor"
+                app:tabIndicatorHeight="@dimen/tab_layout_tab_indicator_height"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/blackColor"/>
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/group_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/group_add_post_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="@dimen/fab_elevation"
+            app:fabSize="normal"
+            app:rippleColor="@color/colorAccent"
+            app:srcCompat="@drawable/ic_add_post"/>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/nav_menu_personal_group">
+        <item
+            android:id="@+id/nav_menu_profile_item"
+            android:icon="@drawable/ic_nav_menu_profile_item"
+            android:title="@string/nav_menu_profile_item"/>
+        <item
+            android:id="@+id/nav_menu_inbox_item"
+            android:icon="@drawable/ic_nav_menu_inbox_item"
+            android:title="@string/nav_menu_inbox_item"/>
+        <item
+            android:id="@+id/nav_menu_matches_item"
+            android:icon="@drawable/ic_nav_menu_matches_item"
+            android:title="@string/nav_menu_matches_item"/>
+    </group>
+
+    <item android:title="@string/nav_menu_group_title">
+        <menu>
+            <group android:id="@+id/nav_menu_communication_group">
+                <item
+                    android:id="@+id/nav_menu_user_group_item"
+                    android:title=""
+                    android:icon="@drawable/group_photo_placeholder"
+                    android:visible="false"/>
+                <item
+                    android:id="@+id/nav_menu_create_group_item"
+                    android:icon="@drawable/ic_nav_menu_create_group_item"
+                    android:title="@string/nav_menu_create_group_item"
+                    android:visible="true"/>
+                <item
+                    android:id="@+id/nav_menu_join_group_item"
+                    android:icon="@drawable/ic_nav_menu_join_group_item"
+                    android:title="@string/nav_menu_join_group_item"
+                    android:visible="true"/>
+            </group>
+        </menu>
+    </item>
+
+    <group android:id="@+id/nav_menu_other_group">
+        <item
+            android:id="@+id/nav_menu_about_us_item"
+            android:icon="@drawable/ic_nav_menu_about_us_item"
+            android:title="@string/nav_menu_about_us_item"/>
+
+        <item
+            android:id="@+id/nav_menu_logout_item"
+            android:icon="@drawable/ic_nav_menu_log_out_item"
+            android:title="@string/menu_logout_item"/>
+    </group>
+</menu>

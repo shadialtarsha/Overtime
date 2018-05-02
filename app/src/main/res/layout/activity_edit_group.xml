@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/edit_group_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_group_relative_layout_top_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/edit_group_content_layout_left_margin"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/edit_group_group_photo_card_view"
+                android:layout_width="@dimen/profile_card_view_user_profile_photo_width"
+                android:layout_height="@dimen/profile_card_view_user_profile_photo_height"
+                app:cardCornerRadius="@dimen/profile_card_view_user_profile_photo_radius">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/edit_group_group__photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/user_profile_photo_image_view_radius"/>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/edit_group_texts_layout_top_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edit_group_text_view_left_margin"
+                    android:text="@string/edit_group_group_name_text"
+                    android:textSize="@dimen/edit_group_text_view_text_size"/>
+
+                <EditText
+                    android:id="@+id/edit_group_group_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_group_group_name_edit_text_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/edit_group_text_view_left_margin"
+                    android:layout_marginTop="@dimen/edit_group_bio_text_view_top_margin"
+                    android:text="@string/edit_group_bio_text"
+                    android:textSize="@dimen/edit_group_text_view_text_size"/>
+
+                <EditText
+                    android:id="@+id/edit_group_group_bio_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_group_bio_edit_text_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_group_group_photo_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/fab_elevation"
+        app:fabSize="mini"
+        app:layout_anchor="@id/edit_group_group_photo_card_view"
+        app:layout_anchorGravity="right|end|bottom"
+        app:rippleColor="@color/colorAccent"
+        app:srcCompat="@drawable/ic_edit_photo"/>
+
+</android.support.design.widget.CoordinatorLayout>

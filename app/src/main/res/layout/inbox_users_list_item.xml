@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/users_list_item_padding">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/inbox_users_user_profile_photo"
+            android:layout_width="@dimen/inbox_users_user_profile_photo_width"
+            android:layout_height="@dimen/inbox_users_user_profile_photo_height"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/user_profile_photo_image_view_radius"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/inbox_users_user_name_and_message_left_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/inbox_users_username_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/blackColor"
+                android:textSize="@dimen/inbox_users_username_text_size"/>
+
+            <TextView
+                android:id="@+id/inbox_users_last_message_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:textSize="@dimen/inbox_users_last_message_text_size"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/users_list_item_padding">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/users_user_profile_photo"
+            android:layout_width="@dimen/users_user_profile_photo_width"
+            android:layout_height="@dimen/users_user_profile_photo_height"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/user_profile_photo_image_view_radius"/>
+
+        <TextView
+            android:id="@+id/users_username_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/users_username_left_margin"
+            android:textColor="@color/blackColor"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/users_follow_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone"/>
+</RelativeLayout>

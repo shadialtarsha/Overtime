@@ -1,0 +1,46 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+    <style name="ProfileActivityTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:textColorSecondary">@color/whiteColor</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="AddPostActivityTheme" parent="AppTheme">
+        <item name="android:colorButtonNormal">@drawable/button_add_post_selector</item>
+        <item name="colorButtonNormal">@drawable/button_add_post_selector</item>
+    </style>
+
+    <style name="PopupAnimation" parent="Widget.AppCompat.PopupWindow">
+        <item name="android:windowEnterAnimation">@anim/comment_bottom_up</item>
+        <item name="android:windowExitAnimation">@anim/comment_bottom_down</item>
+    </style>
+
+    <style name="GroupActivityTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:textColorSecondary">@color/whiteColor</item>
+    </style>
+
+    <style name="GroupAddPostActivityTheme" parent="AppTheme">
+        <item name="android:colorButtonNormal">@drawable/button_add_post_selector</item>
+        <item name="colorButtonNormal">@drawable/button_add_post_selector</item>
+    </style>
+
+</resources>

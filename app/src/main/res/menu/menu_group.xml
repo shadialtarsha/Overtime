@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/group_menu_delete_item"
+        android:orderInCategory="100"
+        android:title="@string/group_menu_delete_item"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/group_menu_edit_item"
+        android:title="@string/group_menu_edit_item"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/group_menu_leave_item"
+        android:title="@string/group_menu_leave_item"
+        app:showAsAction="never"/>
+    <!--
+    <item
+        android:id="@+id/group_menu_chat_item"
+        android:title="@string/group_menu_chat_item"
+        android:icon="@drawable/ic_group_menu_chat_item"
+        app:showAsAction="always"/>
+        -->
+</menu>

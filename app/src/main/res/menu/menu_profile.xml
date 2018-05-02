@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/profile_menu_logout_item"
+        android:orderInCategory="100"
+        android:title="@string/menu_logout_item"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/profile_menu_edit_profile_item"
+        android:title="@string/edit_profile_activity"
+        android:icon="@drawable/ic_profile_menu_edit_profile_item"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/profile_menu_follow_item"
+        android:title="@string/profile_menu_follow_item"
+        android:icon="@drawable/ic_profile_menu_follow_item"
+        app:showAsAction="always"/>
+</menu>

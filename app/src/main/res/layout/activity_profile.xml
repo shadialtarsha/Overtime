@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="@dimen/profile_appbar_toolbar_elevation">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/profile_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:stateListAnimator="@drawable/appbar_always_elevated"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/profile_collapse_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:titleEnabled="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/profile_appbar_relative_layout_top_margin">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/profile_user_profile_image_card_view"
+                        android:layout_width="@dimen/profile_card_view_user_profile_photo_width"
+                        android:layout_height="@dimen/profile_card_view_user_profile_photo_height"
+                        android:layout_centerHorizontal="true"
+                        app:cardCornerRadius="@dimen/profile_card_view_user_profile_photo_radius"
+                        app:cardElevation="@dimen/profile_card_view_user_profile_photo_elevation">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profile_user_profile_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:riv_corner_radius="@dimen/user_profile_photo_image_view_radius"/>
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/profile_username_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_user_profile_image_card_view"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/profile_username_text_view_top_margin"
+                        android:textColor="@color/whiteColor"
+                        android:textSize="@dimen/profile_username_text_view_text_size"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/profile_bio_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_username_text_view"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/profile_bio_text_view_top_margin"
+                        android:textColor="@color/blackColor"
+                        android:textSize="@dimen/profile_bio_text_view_text_size"/>
+
+                    <LinearLayout
+                        android:id="@+id/profile_social_info_linear_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/profile_social_info_linear_layout_height"
+                        android:layout_below="@id/profile_bio_text_view"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/profile_social_info_linear_layout_left_margin"
+                        android:layout_marginRight="@dimen/profile_social_info_linear_layout_right_margin"
+                        android:layout_marginTop="@dimen/profile_social_info_linear_layout_top_margin"
+                        android:background="@drawable/profile_custom_linear_layout"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <GridLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnCount="3"
+                            android:padding="@dimen/profile_social_info_grid_layout_padding"
+                            android:rowCount="2">
+
+                            <TextView
+                                android:id="@+id/profile_posts_counter_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/profile_social_info_text_view_left_margin"
+                                android:layout_marginRight="@dimen/profile_social_info_text_view_right_margin"
+                                android:textColor="@color/whiteColor"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/profile_followers_counter_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/profile_social_info_text_view_left_margin"
+                                android:layout_marginRight="@dimen/profile_social_info_text_view_right_margin"
+                                android:textColor="@color/whiteColor"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/profile_likes_counter_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/profile_social_info_text_view_left_margin"
+                                android:layout_marginRight="@dimen/profile_social_info_text_view_right_margin"
+                                android:textColor="@color/whiteColor"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/profile_social_info_text_view_left_margin"
+                                android:layout_marginRight="@dimen/profile_social_info_text_view_right_margin"
+                                android:text="@string/profile_posts_counter"
+                                android:textColor="@color/whiteColor"
+                                android:textSize="@dimen/profile_social_info_text_view_text_size"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/profile_social_info_text_view_left_margin"
+                                android:layout_marginRight="@dimen/profile_social_info_text_view_right_margin"
+                                android:text="@string/profile_followers_counter"
+                                android:textColor="@color/whiteColor"
+                                android:textSize="@dimen/profile_social_info_text_view_text_size"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/profile_social_info_text_view_left_margin"
+                                android:layout_marginRight="@dimen/profile_social_info_text_view_right_margin"
+                                android:text="@string/profile_likes_counter"
+                                android:textColor="@color/whiteColor"
+                                android:textSize="@dimen/profile_social_info_text_view_text_size"
+                                android:textStyle="bold"/>
+                        </GridLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/profile_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/profile_tab_layout_top_margin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:tabIndicatorColor="@color/whiteColor"
+                app:tabIndicatorHeight="@dimen/tab_layout_tab_indicator_height"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/blackColor"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/profile_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_post_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="@dimen/fab_elevation"
+            app:fabSize="normal"
+            app:rippleColor="@color/colorAccent"
+            app:srcCompat="@drawable/ic_add_post"/>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

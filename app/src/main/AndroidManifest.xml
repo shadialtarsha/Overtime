@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shadialtarsha.overtime">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".launch_intro_controllers.SplashScreenActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".launch_intro_controllers.IntroActivity"/>
+        <activity android:name=".login_controllers.LoginActivity"/>
+        <activity android:name=".login_controllers.SignUpActivity"/>
+        <activity
+            android:name=".main_screen_controllers.MainActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".profile_controllers.ProfileActivity"
+            android:theme="@style/ProfileActivityTheme">
+        </activity>
+        <activity
+            android:name=".profile_controllers.AddPostActivity"
+            android:theme="@style/AddPostActivityTheme"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".profile_controllers.EditProfileActivity"
+            android:parentActivityName=".profile_controllers.ProfileActivity">
+        </activity>
+        <activity
+            android:name=".main_screen_controllers.AboutUsActivity"
+            android:parentActivityName=".main_screen_controllers.MainActivity">
+        </activity>
+        <activity
+            android:name=".main_screen_controllers.MatchesActivity"
+            android:parentActivityName=".main_screen_controllers.MainActivity">
+        </activity>
+        <activity
+            android:name=".main_screen_controllers.SearchResultsActivity"
+            android:parentActivityName=".main_screen_controllers.MainActivity">
+        </activity>
+        <activity
+            android:name=".inbox_controllers.InboxActivity"
+            android:parentActivityName=".main_screen_controllers.MainActivity">
+        </activity>
+        <activity
+            android:name=".inbox_controllers.NewMessageActivity"
+            android:parentActivityName=".inbox_controllers.InboxActivity">
+        </activity>
+        <activity
+            android:name=".inbox_controllers.ConversationActivity"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".group_controllers.CreateGroupActivity"
+            android:parentActivityName=".main_screen_controllers.MainActivity">
+        </activity>
+        <activity
+            android:name=".group_controllers.GroupActivity"
+            android:parentActivityName=".main_screen_controllers.MainActivity"
+            android:theme="@style/GroupActivityTheme">
+        </activity>
+        <activity
+            android:name=".group_controllers.GroupSearchActivity"
+            android:parentActivityName=".main_screen_controllers.MainActivity">
+        </activity>
+        <activity
+            android:name=".group_controllers.GroupAddPostActivity"
+            android:theme="@style/GroupAddPostActivityTheme"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".group_controllers.EditGroupActivity"
+            android:parentActivityName=".group_controllers.GroupActivity">
+        </activity>
+        <activity
+            android:name=".group_controllers.GroupChatActivity"
+            android:parentActivityName=".group_controllers.GroupActivity">
+        </activity>
+    </application>
+</manifest>

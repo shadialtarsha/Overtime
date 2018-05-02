@@ -1,0 +1,163 @@
+<resources>
+
+    <!-- Shared strings -->
+    <string name="menu_logout_item">Log out</string>
+    <string name="alert_dialog_are_you_sure_message">Are you sure?</string>
+    <string name="alert_dialog_cancel_button">Cancel</string>
+    <string name="alert_dialog_yes_button">Yes</string>
+    <string name="alert_dialog_ok_button">Ok</string>
+    <!-- Facebook App ID -->
+    <string name="facebook_app_id">190975654863912</string>
+    <string name="fb_login_protocol_scheme">fb190975654863912</string>
+    <!-- Main strings -->
+    <string name="app_name" translatable="false">Overtime</string>
+    <string name="main_menu_search_item">Search</string>
+    <string name="main_posts_tab">Wall</string>
+    <string name="main_group_posts_tab">Group</string>
+    <!-- Navigation Drawer strings -->
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
+    <string name="nav_menu_profile_item">Profile</string>
+    <string name="nav_menu_matches_item">Matches</string>
+    <string name="nav_menu_inbox_item">Inbox</string>
+    <string name="nav_menu_group_title">Group</string>
+    <string name="nav_menu_create_group_item">Create Group</string>
+    <string name="nav_menu_join_group_item">Join Group</string>
+    <string name="nav_menu_about_us_item">About us</string>
+    <!-- Introduction strings -->
+    <string name="intro_next_button">Next</string>
+    <string name="intro_skip_button">Skip</string>
+    <string name="intro_start_button">Start</string>
+    <string name="intro_slide1_title_text">Matches Table</string>
+    <string name="intro_slide1_description_text">be aware about all the
+        matches and its scores and standings table for your favourite league</string>
+    <string name="intro_slide2_title_text">Make groups</string>
+    <string name="intro_slide2_description_text">Create or be in a group with your friends and
+        exchange your thoughts about your favourite sport</string>
+    <string name="intro_slide3_title_text">Team News</string>
+    <string name="intro_slide3_description_text">See all your favourite
+        teams news from a lot of sources</string>
+    <!-- Login and Sign up strings -->
+    <string name="login_email_edit_text_hint">Email</string>
+    <string name="login_password_edit_text_hint">Password</string>
+    <string name="login_name_edit_text_hint">Name</string>
+    <string name="login_button">Login</string>
+    <string name="sign_up_create_account_button">Create Account</string>
+    <string name="login_social_text_view">Or you can sign in with:</string>
+    <string name="sign_up_link_text_view_1">No account yet?</string>
+    <string name="sign_up_link_text_view_2">&#160;<u>Create one</u></string>
+    <string name="login_link_text_view_1">Already a groupMember?</string>
+    <string name="login_link_text_view_2">&#160;<u>Login</u></string>
+    <string name="login_forget_password_text_view"><u>Forget password?</u></string>
+    <string name="twitter_alert_message">Sorry, Twitter wants us to
+        provide terms of service and until this time we can\'t afford that.</string>
+    <string name="progress_dialog_title">Authentication</string>
+    <string name="progress_dialog_message">Please wait...</string>
+    <string name="alert_dialog_authentication_title">Authentication</string>
+    <string name="alert_dialog_email_exists_message">This email is already exists.\nYou can reset your password</string>
+    <string name="alert_dialog_authentication_error_message">Something went wrong</string>
+    <string name="alert_dialog_invalid_email_password_message">Invalid Email or password</string>
+    <string name="alert_dialog_reset_password_title">Reset Password</string>
+    <string name="alert_dialog_enter_email_message">Enter your email please:</string>
+    <string name="alert_dialog_check_your_email_message">Check your email please</string>
+    <string name="alert_dialog_no_account_message">No account with this email</string>
+    <string name="edit_text_invalid_email">Invalid email</string>
+    <string name="edit_text_invalid_name">Invalid name</string>
+    <string name="edit_text_invalid_password">Invalid password</string>
+    <string name="facebook_connection_canceled">Facebook connection canceled</string>
+    <string name="facebook_connection_failed">Facebook connection failed</string>
+    <string name="google_connection_failed">Google connection failed</string>
+    <string name="reset_password_edit_text_hint">enter your email</string>
+    <!-- Profile strings -->
+    <string name="profile_activity_name">Profile</string>
+    <string name="profile_posts_counter">Posts</string>
+    <string name="profile_likes_counter">Likes</string>
+    <string name="profile_followers_counter">Followers</string>
+    <string name="profile_posts_tab_item">Posts</string>
+    <string name="profile_followers_tab_item">Followers</string>
+    <string name="profile_following_tab_item">Following</string>
+    <string name="profile_media_tab_item">Media</string>
+    <string name="edit_profile_activity">Edit profile</string>
+    <string name="profile_menu_follow_item">Follow</string>
+    <string name="profile_no_posts">No posts</string>
+    <string name="profile_no_followers">No one followed you</string>
+    <string name="profile_no_following">you don\'t follow any one</string>
+    <string name="profile_no_media">No media</string>
+    <string name="profile_no_comments">No comments</string>
+    <!-- Add post strings -->
+    <string name="add_post_edit_text_hint">What\'s happening?</string>
+    <string name="add_post_button">Post</string>
+    <!-- Post card view strings -->
+    <string name="post_delete_options_menu_item">Delete</string>
+    <!-- Comment popup window strings -->
+    <string name="comment_edit_text_hint">Write a comment ...</string>
+    <!-- About us strings -->
+    <string name="about_us_activity">About us</string>
+    <string name="about_us_text">
+        We are a group of students in Al-Baath University 
+        and we\'ve made this application  as our graduation project in order to get our bachelor’s degree as software engineers, 
+        and we hope this application will be the first step in our path to be professional programmers one day.\n\n
+        Call us on the following email:\n <u>team@overtime.com</u>
+    </string>
+    <!-- Edit profile strings -->
+    <string name="edit_profile_username_edit_text_hint">enter your name...</string>
+    <string name="edit_profile_bio_edit_text_hint">enter your bio...</string>
+    <string name="edit_profile_username_text">Name\t\t\t(up to 25 characters)</string>
+    <string name="edit_profile_bio_text">Bio\t\t\t\t\t\t\t(up to 16 characters)</string>
+    <string name="edit_profile_menu_save_item">Save</string>
+    <string name="edit_profile_invalid_input">Invalid input</string>
+    <!-- Search view strings -->
+    <string name="search_view_hint">Search for friends...</string>
+    <string name="search_results_activity">Search Results</string>
+    <string name="search_no_results">No results</string>
+    <!-- Inbox strings -->
+    <string name="inbox_activity">Inbox</string>
+    <string name="inbox_menu_add_item">Add</string>
+    <string name="new_message_activity">New Message</string>
+    <string name="profile_no_messages">No messages</string>
+    <string name="conversation_say_hi">Say Hi .....</string>
+    <string name="conversation_write_message_edit_text_hint">write a message...</string>
+    <!-- create group strings -->
+    <string name="create_group_activity">Create group</string>
+    <string name="create_group_group_name_edit_text_hint">enter group name...</string>
+    <string name="create_group_group_bio_edit_text_hint">enter group bio...</string>
+    <string name="create_group_group_name_text">Name\t\t\t(up to 25 characters)</string>
+    <string name="create_group_group_bio_text">Bio</string>
+    <string name="create_group_menu_create_item">Create</string>
+    <string name="create_group_invalid_input">Invalid input</string>
+    <!-- Group strings -->
+    <string name="group_activity_name">Group</string>
+    <string name="group_posts_counter">Posts</string>
+    <string name="group_likes_counter">Likes</string>
+    <string name="group_members_counter">Members</string>
+    <string name="group_posts_tab_item">Posts</string>
+    <string name="group_members_tab_item">Members</string>
+    <string name="group_race_tab_item">Race</string>
+    <string name="group_media_tab_item">Media</string>
+    <string name="group_edit_group_activity">Edit group</string>
+    <string name="group_admin_user_rank">Admin</string>
+    <string name="group_co_admin_user_rank">Co-Admin</string>
+    <string name="group_member_user_rank">Member</string>
+    <string name="group_join_button">Join</string>
+    <string name="group_menu_edit_item">Edit</string>
+    <string name="group_menu_delete_item">Delete</string>
+    <string name="group_menu_leave_item">Leave</string>
+    <string name="group_menu_chat_item">Chat</string>
+    <string name="group_search_no_results">No Results</string>
+    <string name="group_search_activity">Group Search</string>
+    <string name="group_menu_search_item">Search</string>
+    <string name="group_search_view_hint">Find a group...</string>
+    <string name="group_add_post_edit_text_hint">Tell your mates what you want....</string>
+    <string name="edit_group_group_name_edit_text_hint">enter group\'s name...</string>
+    <string name="edit_group_bio_edit_text_hint">enter group\'s bio...</string>
+    <string name="edit_group_group_name_text">Name</string>
+    <string name="edit_group_bio_text">Bio</string>
+    <string name="edit_group_menu_save_item">Save</string>
+    <string name="edit_group_invalid_input">Invalid input</string>
+    <string name="edit_group_activity">Edit Group</string>
+    <string name="no_group_found">Create a group or join one</string>
+    <!-- Matches strings -->
+    <string name="matches_activity">Matches</string>
+    <string name="matches_no_content">No matches</string>
+    <string name="date_picker_title">Date of the matches:</string>
+</resources>
